@@ -1,0 +1,484 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+#nav {
+display: flex;
+padding-top: 5px ;
+align-items: center;
+position: fixed;
+z-index: 300;
+justify-content: space-around;
+width: 100%;
+
+}
+ #nav nav a{
+    margin: 0 10px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.456);
+
+}
+#nav nav span {
+    margin-left: 30px;
+
+    }
+#nav .logo img{
+    width: 80px;
+    height: 80px;
+}
+ #nav .activeLink{
+    color: black;
+ }
+ .navBackground{
+    background-color: #ffffffe0;
+}
+/*Nav responsive*/
+@media only screen and (max-width:500px){
+    #nav {
+        display: flex;
+        padding: 10px 0 ;
+        align-items: center;
+        z-index: 300;
+        margin-bottom: 50px;
+        
+        
+        }
+        #nav nav {
+            
+        display: flex;
+        flex-direction: column;
+      
+        
+        }
+        #nav nav a {
+            margin-top:10px ;
+            }
+            #nav nav span {
+                margin-top:10px ;
+                transform: translateX(-30px);
+                }
+
+        }
+
+ /* Bannier*/
+
+.banner{
+    padding: 100px 50px;
+    background-color: rgba(216, 230, 232, 0.537);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.banner .banner-text{
+    width: 50%;
+}
+.banner-text button{
+    background-color: rgb(228, 180, 48);
+    color: #fff;
+    height: 3rem;
+    font-weight: 400;
+    width: 150px;
+    border-width: 0;
+    font-size: large;
+}
+.banner-text button:hover{
+ transform: scale(1.1);
+ filter: drop-shadow(0 .5rem .5rem rgb(228, 180, 48));
+}
+.banner p{
+    font-size: 64px;
+    text-transform: capitalize;
+    font-weight: 500;
+    
+}
+.banner a{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+ .banner  img{
+  width: 400px;
+  
+}
+ /*Banner Responsive*/
+ @media only screen and (max-width :650px){
+    .banner{
+        padding: 100px 50px;
+        background-color: rgba(216, 230, 232, 0.537);
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+     
+        
+    }
+    .banner p{
+        font-size: 24px;
+        text-transform: capitalize;
+        font-weight: 500;
+        
+    }
+    .banner  img{
+        margin-top: 50px;
+        width: 80%;
+        
+      }
+ }
+/*About*/
+
+.about{
+    padding: 50px 50px; 
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+ 
+.about img{
+    width:  50%;
+    height: 50%;
+
+}
+.about .about-text{
+    width: 40%;
+}
+.about .about-text h1{
+    color:rgb(228, 180, 48) ;
+}
+.about .about-text button{
+    width: 130px;
+    height: 2rem;
+    background-color:rgb(228, 180, 48) ;
+    color: #fff;
+    border-width: 0;
+    font-weight: 600;
+    border-radius: 5px;
+}
+.about .about-text a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/*About responsive*/
+@media screen and (max-width:500px) {
+    .about{
+        padding: 50px 0; 
+        display: flex;
+       flex-direction: column;
+        position: relative;
+        align-items: center;
+    }
+    .about .about-text{
+        width: 80%;
+    }
+}
+/*form*/
+
+.form{
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.form form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 20px;
+    padding: 20px 0;
+}
+.form form .field{
+    width: 80%;
+    text-align: center;
+}
+.field input{
+    width: 80%;
+    height: 40px;
+    margin: 5px 0;
+}
+.field select{
+    width: 80%;
+    height: 40px;
+    margin: 5px 0;
+}
+form button{
+    width: 100px;
+    background-color: rgb(228, 180, 48);
+    color: #fff;
+    border-width: 0;
+    height: 2rem;
+    border-radius: 5px;
+}
+   /*Order*/
+.order{
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+   position: relative;
+   background-color: rgba(216, 230, 232, 0.537) ;
+}
+.order h1{
+    color:rgb(228, 180, 48) ;
+}
+.tabs-contents{
+    width: 80%;
+    margin-top: 50px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+   align-items: center;
+   justify-content: center;
+    
+}
+ 
+  .tabs .active-tab{
+    color:rgb(228, 180, 48);
+    position: relative;
+    transition: color .5s;
+}
+a.active-tab::after{
+    content: "";
+    position:absolute;
+    height:4px;
+    background-color: rgb(228, 180, 48);
+    width: 120%;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: ease-in-out .5s;
+}
+.tabs a{
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
+    color: black;
+}
+
+.card{
+ width: 200px; 
+ height: 20%;  
+ position: relative;
+ padding: 5px;
+ margin: 10px;
+ text-align: center;
+ background-color: #fff;
+ border-radius: 10px;
+ padding-bottom: 5px;
+ filter: drop-shadow(0em 1em 1em #bab6b6);
+ 
+}
+.card img{
+width: 100%; 
+ height: 120px;
+ border-top-left-radius: 10px;
+ border-top-right-radius: 10px;
+}
+.card button{
+    background-color: rgba(228, 180, 48, 0.609);
+    border-width: 0;
+    border-radius: 5px;
+    height: 2em;
+    color: rgba(0, 0, 0, 0.64);
+    font-weight: 600;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif    
+}
+.card button:hover{
+    transform: scale(1.1);
+}
+/*order responsive*/
+
+@media only screen and (max-width:400px) {
+    .tabs{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .tabs a{
+        margin-top: 20px ;
+    }
+    a.active-tab::after{
+        content: "";
+        position:absolute;
+        height:2px;
+        background-color: rgb(228, 180, 48);
+        width: 400%;
+        bottom: -3px;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: ease-in-out .5s;
+    }
+}
+/*Slide*/
+
+.slide{
+    padding: 100px 0;
+    
+    text-align: center;
+    position: relative;
+    background: linear-gradient(to left, #fff,#fff, rgba(209, 232, 235, 0.835));
+}
+.slide h1{
+    color: rgb(228, 180, 48);
+}
+.slide .hours{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.slide .opening{
+    align-items: center;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+}
+.slide-carousel{
+    margin-top: 100px;
+    text-align: center;
+    position: relative
+}
+.slide-carousel img{
+    width: 90%;
+}
+
+/*carts*/
+.panier{
+   
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to left, #fff,#fff, rgba(209, 232, 235, 0.835));
+    padding-bottom: 200px;
+}
+.panier nav{
+    width: 100%;
+    display: flex;
+    background-color: #454242b0;
+    padding: 30px;
+    position: relative;
+}
+.panier nav a{
+    margin-left: 10%;
+    color:#fff;
+    text-decoration: none;
+    font-size:24px ;
+}
+.panier nav a:hover{
+    color: rgb(228, 180, 48);
+}
+.contenu-panier{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 50px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.panier h1{
+    color: rgb(228, 180, 48);
+    position: relative;
+}
+.panier h1:after{
+    content: "";
+    position: absolute;
+    background-color: rgb(228, 180, 48);
+    width: 120%;
+    height: 4px;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.carts{
+width:80%;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: start;
+position: relative;
+
+}
+.carts .cart{
+    margin: 10px 10px;
+    padding: 5px;
+    width: 200px;
+    height: 20%;;
+    position: relative;
+    text-align: center;
+    background-color:#fff ;
+    filter: drop-shadow(0em 1em 1em #bab6b6);
+}
+.cart img{
+    width: 100%;
+    height: 100px;
+}
+.cart p{
+    display: flex;
+    justify-content: space-around;
+    font-size:24px ;
+}
+.cart button{
+    background: none;
+    border-style: solid;
+    color: rgb(228, 180, 48);
+    border-color: rgb(228, 180, 48);
+    border-radius: 5px;
+    padding: 5px;
+}
+/*FOOTER*/
+.footer{
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to right, #fff,rgba(221, 240, 242, 0.835), rgba(209, 232, 235, 0.835));
+    position: relative;
+}
+.footer .footer-first{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+   
+}
+.footer p{
+    position: absolute;
+    bottom: 0;
+   
+}
+.footer .logo img{
+    width: 100px;
+    height: 100px;
+}
+.footer .contact h1{
+
+    font-family:Georgia, 'Times New Roman', Times
+}
+.footer .contact span{
+    color: rgb(228, 180, 48);
+}
+.footer .social{
+    text-align: center;
+}
+.footer .social a{
+    font-size:20px ;
+    margin: 0 10px;
+    color: black;
+    background-color:#ffffff80;
+    padding: 7px ;
+    border-radius: 50%;
+}
+
